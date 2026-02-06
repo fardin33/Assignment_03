@@ -1,4 +1,7 @@
-// Problem-01: New Price for Eid Sale
+//--------------------------------------//
+// Problem-02: New Price for Eid Sale //
+//--------------------------------------//
+
 // ⚠️ Function Name Must be newPrice()
 // আসন্ন ইদ উপলক্ষে তুমি তোমার দোকানের প্রোডাক্টে ডিসকাউণ্ট দিতে চাচ্ছ। কিন্তু প্রতিটা প্রোডাক্টের নতুন দাম আলাদা আলাদা হিসাব করতে গেলে ঝামেলা। তাই তুমি একটা ফাংশন বানাতে চাও, যা মূল দাম এবং ডিসকাউন্ট% নিলে নতুন দাম বের করে দেবে।
 
@@ -28,7 +31,9 @@
 // 500, "5"
 // Invalid
 
-// Problem 01 - Solution : //
+//---------------------------//
+// Problem - 01 : Solution //
+//--------------------------//
 
 function newPrice(currentPrice, discount) {
   // Step - 1 : Input Value Check : //
@@ -48,3 +53,5 @@ function newPrice(currentPrice, discount) {
 
 const getDiscount = newPrice(2000, 17.17);
 console.log(getDiscount);
+
+//-------- Problem 01 Solved! -------//
