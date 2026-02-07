@@ -45,6 +45,4 @@
 // Invalid
 
 /*function signature/sample */
-function analyzeText(str) {
-  // You have to write your code here
-}
+function analyzeText(str) {}
