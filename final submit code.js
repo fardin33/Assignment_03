@@ -1,7 +1,6 @@
 //-----------------------------------------------//
 // Problem - 01 : New Price for Eid Sale
 //-----------------------------------------------//
-
 function newPrice(currentPrice, discount) {
   // Step - 1 : Input Value Check : //
   if (typeof currentPrice !== "number" || typeof discount !== "number") {
@@ -18,8 +17,6 @@ function newPrice(currentPrice, discount) {
   return number.toFixed(3);
 }
 
-//---------------Problem - 01 End-----------------//
-
 //-----------------------------------------------//
 // Problem - 02 : OTP Validation for Zapshift
 //-----------------------------------------------//
@@ -34,7 +31,6 @@ function validOtp(otp) {
   }
   return true;
 }
-//---------------Problem - 02 End-----------------//
 
 //-----------------------------------------------//
 // Problem - 03 : BCS Final Score Calculator
@@ -53,16 +49,11 @@ function finalScore(omr) {
   const score = right * 1 + wrong * -0.5;
   return Math.round(score);
 }
-//---------------Problem - 03 End-----------------//
 
 //------------------------------------------------//
 // Problem - 04 : Upcoming Gono Vote
 //------------------------------------------------//
 
-//---------------Problem - 04 End-----------------//
-
 //------------------------------------------------//
 // Problem - 05 : Text Analyzer for an AI Company
 //------------------------------------------------//
-
-//---------------Problem - 05 End-----------------//
