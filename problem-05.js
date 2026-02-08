@@ -44,5 +44,44 @@
 // " "
 // Invalid
 
-/*function signature/sample */
-function analyzeText(str) {}
+//---------------------------//
+// Problem - 05 : Solution //
+//--------------------------//
+
+function analyzeText(str) {
+  if (typeof str !== "string") {
+    return "Invalid";
+  }
+
+  const words = str.split(" ");
+
+  let longwords = "";
+
+  for (let word of words) {
+    if (word.length > longwords.length) {
+      longwords = word;
+    }
+  }
+
+  if (longwords === "") {
+    return "Invalid";
+  }
+
+  const token = words.join("").length;
+
+  return { longwords, token };
+}
+
+const test1 = analyzeText("I am a little honest person");
+const test2 = analyzeText("Hello world");
+const test3 = analyzeText("Keep coding keep shining");
+const test4 = analyzeText(12345);
+const test5 = analyzeText("Programming is fun");
+const test6 = analyzeText("A quick brown fox");
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
+console.log(test4);
+console.log(test5);
+console.log(test6);

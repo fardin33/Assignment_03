@@ -29,6 +29,43 @@
 // 12345
 // Invalid
 
+//---------------------------//
+// Problem - 04 : Solution //
+//--------------------------//
+
 function gonoVote(array) {
-  //write your code here
+  if (!Array.isArray(array)) {
+    return "Invalid";
+  }
+
+  let haVote = 0;
+  let naVote = 0;
+
+  for (let vote of array) {
+    if (vote === "ha") {
+      haVote++;
+    } else if (vote === "na") {
+      naVote++;
+    }
+  }
+
+  if (haVote > naVote) {
+    return true;
+  } else if (haVote === naVote) {
+    return "equal";
+  } else {
+    return false;
+  }
 }
+
+const testArray1 = gonoVote(["ha", "na", "ha", "na"]);
+const testArray2 = gonoVote(["ha", "na", "na"]);
+const testArray3 = gonoVote(["ha", "ha", "ha", "na"]);
+const testArray4 = gonoVote(["ha na"]);
+const testArray5 = gonoVote([12345]);
+
+console.log(testArray1);
+console.log(testArray2);
+console.log(testArray3);
+console.log(testArray4);
+console.log(testArray5);

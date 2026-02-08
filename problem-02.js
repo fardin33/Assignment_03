@@ -50,7 +50,15 @@ function validOtp(otp) {
   return true;
 }
 
-const inputValue = validOtp("ph-12345");
-console.log(inputValue);
+const inputValue1 = validOtp("ph-10985");
+const inputValue2 = validOtp("ph-1234");
+const inputValue3 = validOtp("abc-12345");
+const inputValue4 = validOtp("ph-10985");
+const inputValue5 = validOtp("12345678");
+console.log(inputValue1);
+console.log(inputValue2);
+console.log(inputValue3);
+console.log(inputValue4);
+console.log(inputValue5);
 
 //-------- Problem 02 Solved! -------//

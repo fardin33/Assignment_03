@@ -51,7 +51,17 @@ function newPrice(currentPrice, discount) {
   return number.toFixed(3);
 }
 
-const getDiscount = newPrice(2000, 17.17);
-console.log(getDiscount);
+const getDiscount1 = newPrice(1500, 20);
+const getDiscount2 = newPrice(2000, 15);
+const getDiscount3 = newPrice(1200, 7);
+const getDiscount4 = newPrice("100", 10);
+const getDiscount5 = newPrice(2000, 17.17);
+const getDiscount6 = newPrice(500, "5");
+console.log(getDiscount1);
+console.log(getDiscount2);
+console.log(getDiscount3);
+console.log(getDiscount4);
+console.log(getDiscount5);
+console.log(getDiscount6);
 
 //-------- Problem 01 Solved! -------//

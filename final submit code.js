@@ -2,18 +2,15 @@
 // Problem - 01 : New Price for Eid Sale
 //-----------------------------------------------//
 function newPrice(currentPrice, discount) {
-  // Step - 1 : Input Value Check : //
   if (typeof currentPrice !== "number" || typeof discount !== "number") {
     return "Invalid";
   } else if (discount < 0 || discount > 100) {
     return "Invalid";
   }
 
-  //---- Step - 2 : Get Final Discount Amount ----//
   let discountAmount = (currentPrice * discount) / 100;
   let number = currentPrice - discountAmount;
 
-  // Result 3 decimal Porjontto Output e Dekhabe :
   return number.toFixed(3);
 }
 
@@ -21,7 +18,6 @@ function newPrice(currentPrice, discount) {
 // Problem - 02 : OTP Validation for Zapshift
 //-----------------------------------------------//
 function validOtp(otp) {
-  // Check Input Value Type is string or number/array/object or something :
   if (typeof otp !== "string") {
     return "Invalid";
   } else if (otp.length !== 8) {
@@ -53,7 +49,54 @@ function finalScore(omr) {
 //------------------------------------------------//
 // Problem - 04 : Upcoming Gono Vote
 //------------------------------------------------//
+function gonoVote(array) {
+  if (!Array.isArray(array)) {
+    return "Invalid";
+  }
+
+  let haVote = 0;
+  let naVote = 0;
+
+  for (let vote of array) {
+    if (vote === "ha") {
+      haVote++;
+    } else if (vote === "na") {
+      naVote++;
+    }
+  }
+
+  if (haVote > naVote) {
+    return true;
+  } else if (haVote === naVote) {
+    return "equal";
+  } else {
+    return false;
+  }
+}
 
 //------------------------------------------------//
 // Problem - 05 : Text Analyzer for an AI Company
 //------------------------------------------------//
+function analyzeText(str) {
+  if (typeof str !== "string") {
+    return "Invalid";
+  }
+
+  const words = str.split(" ");
+
+  let longwords = "";
+
+  for (let word of words) {
+    if (word.length > longwords.length) {
+      longwords = word;
+    }
+  }
+
+  if (longwords === "") {
+    return "Invalid";
+  }
+
+  const token = words.join("").length;
+
+  return { longwords, token };
+}
